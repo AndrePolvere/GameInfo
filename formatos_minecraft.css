@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center;     /* Centraliza os elementos verticalmente */
+    background: radial-gradient(circle, #1a1a1a, #000000);
+    border-bottom: 5px solid #000; /* Borda divisória entre as seções */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.slogan {
+    display: flex;
+    font-size: 150px;
+    color: rgb(255, 255, 255);
+    font-family: tiny5;
+    font-weight: bold;
+    letter-spacing: 5px;
+    justify-content: center;  /* Centraliza o texto dentro do elemento */
+    align-items: center;
+    text-align: center;
+}
+.section {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    position: relative;
+    scroll-snap-align: start;
+    border-bottom: 20px solid #000;
+}
+
+.section:nth-child(2) {
+    background: url('minefundo1.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.section:nth-child(3) {
+    background: url('minefundo3.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.section:nth-child(4) {
+    background: url('minefundo2.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.text-space-left,
+.text-space-right {
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: 10px;
+}
+
+.text-space-left {
+    margin-left: 20px;
+}
+
+.text-space-right {
+    margin-left: auto; /* Empurra a caixa para a direita */
+    margin-right: 20px; /* Espaçamento da borda direita */
+}
+
+
+.text-space h2 {
+    font-size: 30px;
+}
+
+.text-space p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+footer {
+    background: radial-gradient(circle, #3b3b3b, #000000);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-nav {
+    margin-bottom: 10px;
+}
+
+.footer-nav a {
+    color: #d3d3d3;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.footer-nav a:hover {
+    color: #f5f5f5;
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .logo {
+        flex: 100%;
+        background-size: contain;
+        height: 80px;
+    }
+
+    .slogan {
+        flex: 100%;
+        font-size: 60px;
+        letter-spacing: 3px;
+    }
+
+    .cavaleiro {
+        flex: 100%;
+        background-size: contain;
+        height: 80px;
+    }
+
+    /* Ajustes para o conteúdo nas seções */
+    .section {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .text-space-left,
+    .text-space-right {
+        width: 90%;  /* Ajuste a largura para a tela mobile */
+        margin: 10px 0;  /* Adiciona distância vertical entre as caixas */
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .text-space-left {
+        margin-left: 10px;
+    }
+
+    .text-space-right {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    /* Aumentar a distância entre as caixas de texto no mobile */
+    .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;  /* Deixa as caixas empilhadas verticalmente */
+        width: 100%;
+        padding: 0 5%;
+        gap: 30px;  /* Distância extra entre as caixas */
+    }
+
+    .text-space h2 {
+        font-size: 24px;
+    }
+
+    .text-space p {
+        font-size: 16px;
+    }
+     
+    @media (max-width: 480px) {
+            header {
+                flex-direction: row; /* Mantém os elementos alinhados horizontalmente */
+                height: auto; /* Ajusta a altura do header */
+                padding: 10px 0; /* Reduz o padding */
+                justify-content: center; /* Centraliza o conteúdo no header */
+            }
+        
+            /* Oculta a logo e o cavaleiro em telas pequenas */
+            .logo,
+            .cavaleiro {
+                display: none;
+            }
+        
+            /* Slogan */
+            .slogan {
+                flex: 1; /* O slogan ocupa o espaço restante */
+                font-size: 75px; /* Ajusta o tamanho da fonte */
+                letter-spacing: 1.5px; /* Ajusta o espaçamento entre as letras */
+                text-align: center; /* Centraliza o slogan */
+            }
+        }
+    
+        /* Ajustes para o conteúdo nas seções */
+        .section {
+            height: auto;
+            padding: 30px 0; /* Menos padding nas seções */
+        }
+    
+        .text-space-left,
+        .text-space-right {
+            width: 85%; /* As caixas de texto ocupam mais espaço na tela */
+            margin: 15px 0; /* Maior margem vertical entre as caixas */
+            font-size: 14px; /* Texto menor para melhorar legibilidade em telas pequenas */
+            padding: 12px;
+        }
+    
+        .text-space-left {
+            margin-left: 10px;
+        }
+    
+        .text-space-right {
+            margin-left: auto;
+            margin-right: 10px;
+        }
+    
+        /* Ajustes para o conteúdo */
+        .content {
+            position: relative;
+            display: flex;
+            flex-direction: column; /* As caixas ficam empilhadas verticalmente */
+            width: 100%;
+            padding: 0 5%;
+            gap: 20px; /* Maior distância entre as caixas */
+        }
+    
+        .text-space h2 {
+            font-size: 20px; /* Tamanho do título ajustado para ser legível em telas pequenas */
+        }
+    
+        .text-space p {
+            font-size: 14px; /* Texto reduzido para garantir legibilidade */
+        }
+    }
